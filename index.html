@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+
+    <!--Подключаем стили CSS OwlCarousel-->
+    <link rel="stylesheet" href="libs/OwlCarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel2/assets/owl.theme.default.css">
+
+</head>
+
+<body>
+
+<section class="main-content-wrapper">
+    <section class="first-screen">
+        <section class="header-section">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo">
+                            <a href="./index.html" class="site-logo">
+                                <img src="img/logo1.png">
+                            </a>
+                        </div>
+                        <div class="user-panel">
+                            <div class="login">
+                                <div class="button-reg js-button-reg"> <span>Войти</span>  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            menu-->
+            <nav class="main-navbar">
+                <div class="container">
+                    <ul class="main-menu">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#products">Украшения</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Серьги</a></li>
+                                <li><a href="#">Подвески</a></li>
+                                <li><a href="#">Кольца</a></li>
+                                <li><a href="#">Браслеты</a></li>
+                                <li><a href="#">Часы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#photo">Фотографии</a></li>
+                        <li><a href="#photo">Отзывы</a></li>
+                        <li><a href="#">Полезная информация</a></li>
+                        <li><a href="#">О компании</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+<!--            Регистрация-->
+            <div class="overlay-reg" id="overlay-reg">
+                <div class="popup-reg js-popup-reg">
+                    <h2>Регистрация</h2>
+                    <form action="index.html" name = "form-reg" id="reg">
+                        <input type="text" placeholder="Имя" name="name" class="input-reg">
+                        <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
+                        <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
+                        <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
+                        <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
+                        <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
+                        <input type="tel" placeholder="Телефон" name="telephone" class="input-reg">
+                        <input type="submit" value="Зарегистрироваться" name="reg" class="input-reg button_reg_auth">
+                    </form>
+                    <div class="close-popup-reg js-close-reg"></div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <section class="home">
+            <div class="home-content-wrapper block-content-wrapper">
+                <div class="home-content">
+                    <h1 class="home-content-title">
+                        Jewelry House
+                    </h1>
+                    <a href="#products" class="home-content-button">
+                                    <span class="home-content-button-text">
+                                        Наши украшения
+                                    </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="features-section">
+            <div class="features-section-wrapper">
+                <div class="features-col p-0 feature">
+                    <div class="feature-inner">
+                        <div class="feature-icon">
+                            <img src="img/icons/1.png">
+                            <h2>БЕЗОПАСНЫЕ ПЛАТЕЖИ</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-col p-0 feature">
+                    <div class="feature-inner">
+                        <div class="feature-icon">
+                            <img src="img/icons/2.png">
+                            <h2>ПРЕМИУМ ПРОДУКТЫ</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-col p-0 feature">
+                    <div class="feature-inner">
+                        <div class="feature-icon">
+                            <img src="img/icons/3.png">
+                            <h2>БЫСТРАЯ ДОСТАВКА</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--        products-->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products-title">
+                <h2> - Наши украшения - </h2>
+            </div>
+
+            <div class="owl-carousel owl-theme" id="carousel1">
+                <div class="products-item">
+                    <div class="products-pic">
+                        <img src="./img/products/1.jpg">
+                        <div class="product-links">
+                            <a href="#" class="view-button">
+                                <span class="view-button-text">Кольца</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-item">
+                    <div class="products-pic">
+                        <img src="./img/products/2.jpg">
+                        <div class="product-links">
+                            <a href="#" class="view-button">
+                                <span class="view-button-text">Подвески</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-item">
+                    <div class="products-pic">
+                        <img src="./img/products/4.jpg">
+
+                        <div class="product-links">
+                            <a href="#" class="view-button">
+                                <span class="view-button-text">Серьги</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-item">
+                    <div class="products-pic">
+                        <img src="./img/products/5.jpg">
+                        <div class="product-links">
+                            <a href="#" class="view-button">
+                                <span class="view-button-text">Браслеты</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-item">
+                    <div class="products-pic">
+                        <img src="./img/products/6.jpg">
+                        <div class="product-links">
+                            <a href="#" class="view-button">
+                                <span class="view-button-text">Часы</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--        photo-->
+    <section class="photo" id="photo">
+
+        <div class="container">
+            <div class="photo-title">
+                <h2> - Фотографии - </h2>
+            </div>
+
+            <!--        используем библиотеку js owlCarousel,
+                        она использует jquery-->
+
+            <div class="owl-carousel owl-theme" id="carousel2">
+                <div><img src="img/photo/1.jpg" alt="Img"></div>
+                <div><img src="img/photo/2.jpg" alt="Img"></div>
+                <div><img src="img/photo/3.jpg" alt="Img"></div>
+                <div><img src="img/photo/4.jpg" alt="Img"></div>
+                <div><img src="img/photo/5.jpg" alt="Img"></div>
+                <div><img src="img/photo/6.jpg" alt="Img"></div>
+                <div><img src="img/photo/7.jpg" alt="Img"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--        footer-->
+    <section class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="img/logo1.png">
+                </a>
+            </div>
+            <div class="row">
+                <div class="footer-content">
+                    <div class="footer-widget about-widget">
+                        <h2>О нас</h2>
+                        <p>
+                            Интернет-магазин компании Jewelry House. Мы работаем для Вас, и ради Вас!
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-widget about-widget">
+                        <h2>О компании</h2>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Украшения</a></li>
+                            <li><a href="#">Фотографии</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Партнеры</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-widget contact-widget">
+                        <h2>Контактная информация</h2>
+                        <div class="contact-info">
+                            <span>Адрес:</span>
+                            <p>г. Новосибирск, ул. Немировича-Данченко</p>
+                        </div>
+                        <div class="contact-info">
+                            <span>Телефон:</span>
+                            <p>+79130671968</p>
+                        </div>
+                        <div class="contact-info">
+                            <span>Почта:</span>
+                            <p>product_jewerly@jewelry.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-links">
+            <div class="container">
+                <div class="social-links-warp">
+                    <a href="" class="instagram"><span>instagram</span></a>
+                    <a href="" class="google-plus"><span>g+plus</span></a>
+                    <a href="" class="facebook"><span>facebook</span></a>
+                    <a href="" class="twitter"><span>twitter</span></a>
+                    <a href="" class="youtube"><span>youtube</span></a>
+                </div>
+                <p class="text-footer">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | Данный сайт создан не для коммерческой деятельности </p>
+    </section>
+
+</section>
+
+
+<!--        vendor scripts (скрипты от поставщика)-->
+<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+<script src="libs/OwlCarousel2/owl.carousel.min.js"></script>
+
+<!--    user scripts-->
+<script src="js/main.js"></script>
+
+
+<script type="text/javascript"
+        srs="./js/index.js"> <!-- для того, чтобы сначала загружался контент, а затем все скрипты, быстрее-->
+</script>
+
+
+</body>
+</html>
