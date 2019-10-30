@@ -27,7 +27,7 @@
                         </div>
                         <div class="user-panel">
                             <div class="login">
-                                <div class="button-reg js-button-reg"> <span>Войти</span>  </div>
+                                <div class="button-reg js-button-reg"><span>Войти</span></div>
                             </div>
                         </div>
                     </div>
@@ -49,36 +49,15 @@
                             </ul>
                         </li>
                         <li><a href="#photo">Фотографии</a></li>
-                        <li><a href="#photo">Отзывы</a></li>
+                        <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Полезная информация</a></li>
                         <li><a href="#">О компании</a></li>
                     </ul>
                 </div>
             </nav>
 
-<!--            Регистрация-->
-            <div class="overlay-reg js-overlay-reg">
-                <img class="close-popup-reg js-close-reg" src="img/icons/close.png"></img>
-                <div class="popup-reg js-popup-reg">
-                    <h2>Регистрация</h2>
-                    <form action="index.html" name = "form-reg" id="reg">
-                        <input type="text" placeholder="Имя" name="name" class="input-reg">
-                        <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
-                        <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
-                        <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
-                        <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
-                        <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
-                        <input type="tel" placeholder="Телефон" name="telephone" class="input-reg">
-                        <input type="submit" value="Зарегистрироваться" name="reg" class="input-reg button_reg_auth">
-                    </form>
-
-                </div>
-            </div>
-
-
-
-
         </section>
+
         <section class="home">
             <div class="home-content-wrapper block-content-wrapper">
                 <div class="home-content">
@@ -93,6 +72,8 @@
                 </div>
             </div>
         </section>
+
+<!--        Преимущества-->
         <section class="features-section">
             <div class="features-section-wrapper">
                 <div class="features-col p-0 feature">
@@ -240,9 +221,9 @@
                         <h2>О компании</h2>
                         <ul>
                             <li><a href="#">О нас</a></li>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Украшения</a></li>
-                            <li><a href="#">Фотографии</a></li>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="#products">Украшения</a></li>
+                            <li><a href="#photo">Фотографии</a></li>
                             <li><a href="#">Отзывы</a></li>
                             <li><a href="#">Партнеры</a></li>
                             <li><a href="#">Поддержка</a></li>
@@ -283,6 +264,24 @@
 
 </section>
 
+<!--            Регистрация-->
+
+<div class="overlay-reg js-overlay-reg">
+    <div class="popup-reg js-popup-reg">
+        <h2>Регистрация</h2>
+        <div class="close-popup-reg js-close-reg"></div>
+        <form action="index.html" name="form-reg" id="reg">
+            <input type="text" placeholder="Имя" name="name" class="input-reg">
+            <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
+            <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
+            <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
+            <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
+            <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
+            <input type="tel" placeholder="Телефон" name="telephone" class="input-reg">
+            <input type="submit" value="Зарегистрироваться" name="reg" class="input-reg button_reg_auth">
+        </form>
+    </div>
+</div>
 
 <!--        vendor scripts (скрипты от поставщика)-->
 <script src="libs/jquery/jquery-3.4.1.min.js"></script>

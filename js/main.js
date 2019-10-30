@@ -27,12 +27,39 @@ $(document).ready(function(){
 //который позволяет плавно показать окно
 
 // $('.js-button-reg').click(function () {
-//     $('main-content-wrapper').css('filter', 'blur(5px)');
 //     $('js-overlay-reg').fadeIn();
+//     // $('body').css('filter', 'blur(5px)');
 // });
 //
-// // // Закрыть на крестик
+// // Закрыть на крестик - work
 // $('.js-close-reg').click(function () {
 //     $('.js-overlay-reg').fadeOut();
-//     $('main-content-wrapper').css('filter', 'none');
+//     $('body').css('filter', 'none');
 // });
+
+
+
+// Модальное окно
+
+// открыть по кнопке
+$('.js-button-reg').click(function() {
+    $('.js-overlay-reg').fadeIn();
+});
+
+// закрыть на крестик
+$('.js-close-reg').click(function() {
+    $('.js-overlay-reg').fadeOut();
+
+});
+
+// закрыть по клику вне окна
+$(document).mouseup(function (e) {
+    var popup = $('.js-popup-reg');
+    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+        $('.js-overlay-reg').fadeOut();
+
+    }
+});
+
+
+

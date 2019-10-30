@@ -116,33 +116,64 @@ a {
 /*Модальное окно регистрации*/
 
 .overlay-reg {
-    width: 350px;
-    height: 500px;
-    margin: 20px auto;
-    background: #ffbc7b;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.popup-reg {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #ffbc7b;
+    color: black;
+    text-align: center;
 }
 
 .popup-reg h2 {
     text-transform: uppercase;
     font-weight: 700;
     color: black;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
-
-.popup-reg {
-    margin: 0 auto;
-    text-align: center;
-}
-
 .close-popup-reg {
-    cursor: pointer;
-    height: 23px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     width: 23px;
-    margin: 10px 0 0 320px;
+    height: 23px;
+    cursor: pointer;
 }
 
-.close-popup-reg:hover {
-    background: #282828;
+
+.close-popup-reg:before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    left: -4px;
+    transform: rotate(-45deg);
+}
+
+.close-popup-reg:after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    transform: rotate(45deg);
+    left: -4px;
 }
 
 .input-reg {
@@ -162,7 +193,61 @@ a {
 .button_reg_auth:hover {
     color: black;
     background: #ffbc7b;
+    font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .popup-reg {
+        width: 100%;
+        height: 100vh;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Меню*/
 .main-navbar{
