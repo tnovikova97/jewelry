@@ -132,28 +132,17 @@ a {
 .popup-reg {
     margin: 0 auto;
     text-align: center;
-    padding-top: 25px;
 }
 
 .close-popup-reg {
     cursor: pointer;
-    height: 3px;
+    height: 23px;
     width: 23px;
-    transform: rotate(45deg);
-    background: black;
-    position: absolute;
-    left: 400px;
-    top: 220px;
+    margin: 10px 0 0 320px;
 }
 
-.close-popup-reg:before {
-    content: '';
-    background: black;
-    transform: rotate(-90deg);
-    height: 3px;
-    width: 23px;
-    right: 1px;
-    position: absolute;
+.close-popup-reg:hover {
+    background: #282828;
 }
 
 .input-reg {
