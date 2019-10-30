@@ -1,8 +1,8 @@
 @import "typography.css";
 
-/**, ::after, ::before {*/
-/*    box-sizing: border-box;*/
-/*}*/
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -115,7 +115,7 @@ a {
 
 /*Модальное окно регистрации*/
 
-#overlay-reg {
+.overlay-reg {
     width: 350px;
     height: 500px;
     margin: 20px auto;
@@ -126,12 +126,34 @@ a {
     text-transform: uppercase;
     font-weight: 700;
     color: black;
+    padding-bottom: 10px;
 }
 
 .popup-reg {
     margin: 0 auto;
     text-align: center;
     padding-top: 25px;
+}
+
+.close-popup-reg {
+    cursor: pointer;
+    height: 3px;
+    width: 23px;
+    transform: rotate(45deg);
+    background: black;
+    position: absolute;
+    left: 400px;
+    top: 220px;
+}
+
+.close-popup-reg:before {
+    content: '';
+    background: black;
+    transform: rotate(-90deg);
+    height: 3px;
+    width: 23px;
+    right: 1px;
+    position: absolute;
 }
 
 .input-reg {
