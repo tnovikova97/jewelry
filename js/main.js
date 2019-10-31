@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 
 
-// Модальное окно
+// Модальное окно регистрации
 
 // открыть по кнопке
 $('.js-button-reg').click(function() {
@@ -47,8 +47,28 @@ $(document).mouseup(function (e) {
     }
 });
 
+// $('.message a').click(function () {
+//     $('.user-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+// });
 
-//Tip of the Day
+// Реализация регистрации и авторизации в одном окне
+$(function () {
+    $('#reg-link').on('click', function (e) {
+        $('.login-form').css('display', 'none');
+        $('.register-form').css('display', 'inline');
+        e.preventDefault()
+    });
+});
+
+$(function () {
+    $('#log-link').on('click', function (e) {
+        $('.register-form').css('display', 'none');
+        $('.login-form').css('display', 'inline');
+        e.preventDefault()
+    });
+});
+
+//Совет дня (Tip of the Day)
 var today_obj=new Date();
 // var today_date=today_obj.getDate();
 

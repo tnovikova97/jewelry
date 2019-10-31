@@ -62,6 +62,10 @@ div{
     margin-right: 50px;
 }
 
+.logo img {
+    width: 150px;
+}
+
 .site-logo{
     display: inline-block;
 }
@@ -92,7 +96,7 @@ a {
     border: none;
     background: #323232;
     cursor: pointer;
-    width: 100px;
+    width: 150px;
     /*height: 40px;*/
     border-radius: 10px;
 
@@ -193,6 +197,24 @@ a {
     color: black;
     background: #ffbc7b;
     font-weight: bold;
+}
+
+.user-form .message{
+    color: black;
+}
+
+.user-form .message a{
+    color: black;
+}
+
+.user-form .message a:hover {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.user-form .register-form {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -550,6 +572,10 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.footer-logo img {
+    width: 150px;
 }
 
 .footer-widget {

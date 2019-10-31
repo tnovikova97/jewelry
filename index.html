@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="logo">
                             <a href="./index.html" class="site-logo">
-                                <img src="img/logo1.png">
+                                <img src="img/logo.png">
                             </a>
                         </div>
                         <div class="user-panel">
@@ -206,7 +206,7 @@
         <div class="container">
             <div class="footer-logo">
                 <a href="index.html">
-                    <img src="img/logo1.png">
+                    <img src="img/logo.png">
                 </a>
             </div>
             <div class="row">
@@ -269,27 +269,42 @@
 <!--            Регистрация-->
 <div class="overlay-reg js-overlay-reg">
     <div class="popup-reg js-popup-reg">
-        <h2>Регистрация</h2>
+
         <div class="close-popup-reg js-close-reg"></div>
-        <form action="index.html" name="form-reg" id="reg">
-            <input type="text" placeholder="Имя" name="name" class="input-reg">
-            <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
-            <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
-            <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
-            <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
-            <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
-            <input type="tel" placeholder="Телефон" name="telephone" class="input-reg">
-            <input type="submit" value="Зарегистрироваться" name="reg" class="input-reg button_reg_auth">
-        </form>
+        <div class="user-form">
+
+            <form class="login-form" id="login">
+                <h2>Войти</h2>
+                <input type="text" placeholder="Логин" name="login" class="input-reg">
+                <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
+                <input type="submit" value="Войти" name="reg" class="input-auth button_reg_auth">
+                <p class="message"> Нет аккаунта? <a href="" id="reg-link"> Зарегистрироваться</a></p>
+            </form>
+
+            <form class="register-form" id="reg">
+                <h2>Регистрация</h2>
+                <input type="text" placeholder="Имя" name="name" class="input-reg">
+                <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
+                <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
+                <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
+                <input type="text" placeholder="Логин" name="login" class="input-reg">
+                <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
+                <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
+                <input type="submit" value="Создать аккаунт" name="reg" class="input-reg button_reg_auth">
+                <p class="message"> Уже есть аккаунт? <a href="" id="log-link">Войти</a></p>
+            </form>
+
+        </div>
     </div>
 </div>
 
-<!--Совет дня-->
-     <div class="overlay-totd js-overlay-totd" id="tipoftheday">
+<!--            Совет дня-->
+<div class="overlay-totd js-overlay-totd" id="tipoftheday">
          <form action="" class="tip_of_the_day_form" id="totd_form">
              <div id="randomtip"></div>
          </form>
      </div>
+
 
 
 
@@ -303,11 +318,6 @@
 
 <!--    user scripts-->
 <script src="js/main.js"></script>
-
-
-<script type="text/javascript"
-        srs="./js/index.js"> <!-- для того, чтобы сначала загружался контент, а затем все скрипты, быстрее-->
-</script>
 
 
 </body>
