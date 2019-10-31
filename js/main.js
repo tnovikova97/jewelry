@@ -126,7 +126,7 @@ password.addEventListener("blur", passwordVerify, true);
 password2.addEventListener("blur", password2Verify, true);
 
 //validation function
-function validate() {
+function validate_reg() {
     //username validation
     if (username.value == "") {
         username.style.border = "3px solid #FF1F1F";
@@ -163,7 +163,7 @@ function validate() {
         return false;
     }
 
-//    check if the two  password match
+//    Проверка 2-х введеных паролей
     if (password.value != password2.value) {
         password.style.border = "3px solid #FF1F1F";
         password2.style.border = "3px solid #FF1F1F";
@@ -222,3 +222,49 @@ function password2Verify() {
         return true;
     }
 }
+
+// Валидация формы авторизации
+var login_auth = document.forms["auth-form"]["login_auth"];
+var password_auth = document.forms["auth-form"]["password_auth"];
+
+var login_auth_error = document.getElementById("login_auth_error");
+var password_auth_error = document.getElementById("password_auth_error");
+
+login_auth.addEventListener("blur", loginVerify, true);
+password_auth.addEventListener("blur", passwordVerify, true);
+
+
+function validate_auth() {
+    //login validation
+    if (login_auth.value == "") {
+        login_auth.style.border = "3px solid #FF1F1F";
+        login_auth_error.textContent = "Введите логин";
+        login_auth.focus();
+        return false;
+    }
+    //password validation
+    if (password_auth.value == "") {
+        password_auth.style.border = "3px solid #FF1F1F";
+        password_auth_error.textContent = "Введите пароль";
+        password_auth.focus();
+        return false;
+    }
+    return true;
+}
+
+function loginVerify() {
+    if (login_auth.value !="") {
+        login_auth.style.border = "1px solid #5E6E66";
+        login_auth_error.innerHTML = "";
+        return true;
+    }
+}
+
+function passwordVerify() {
+    if (password_auth.value !="") {
+        password_auth.style.border = "1px solid #5E6E66";
+        password_auth_error.innerHTML = "";
+        return true;
+    }
+}
+

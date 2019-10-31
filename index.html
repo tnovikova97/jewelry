@@ -52,7 +52,8 @@
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Полезная информация</a></li>
                         <li><a href="#">О компании</a></li>
-                        <button onclick="RandomTip()" class="tip_of_the_day-button js-btn-totd"> <span> Совет дня </span></button>
+                        <button onclick="RandomTip()" class="tip_of_the_day-button js-btn-totd"><span> Совет дня </span>
+                        </button>
 
                     </ul>
                 </div>
@@ -261,7 +262,8 @@
                     <a href="" class="youtube"><span>youtube</span></a>
                 </div>
                 <p class="text-footer">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | Данный сайт создан не для коммерческой деятельности </p>
+                    All rights reserved | Данный сайт создан не для коммерческой деятельности
+                </p>
             </div>
     </section>
 
@@ -274,15 +276,23 @@
         <div class="close-popup-reg js-close-reg"></div>
         <div class="user-form">
 
-            <form class="login-form" id="login">
+            <form method="post" action="index.html" onsubmit="return validate_auth()" class="login-form" id="login"
+                  name="auth-form">
                 <h2>Войти</h2>
-                <div><input type="text" placeholder="Логин" name="login" class="input-reg"></div>
-                <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
+                <div>
+                    <input type="text" placeholder="Логин" name="login_auth" class="input-reg">
+                    <div id="login_auth_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Пароль" name="password_auth" class="input-reg">
+                    <div id="password_auth_error" class="validation_error"></div>
+                </div>
                 <input type="submit" value="Войти" name="reg" class="input-auth button_reg_auth">
                 <p class="message"> Нет аккаунта? <a href="" id="reg-link"> Зарегистрироваться</a></p>
             </form>
 
-            <form method="post" action="index.html" onsubmit="return validate()" class="register-form" id="reg" name = "reg-form">
+            <form method="post" action="index.html" onsubmit="return validate_reg()" class="register-form" id="reg"
+                  name="reg-form">
                 <h2>Регистрация</h2>
                 <div>
                     <input type="text" placeholder="Имя" name="username" class="input-reg">
@@ -318,16 +328,10 @@
 
 <!--            Совет дня-->
 <div class="overlay-totd js-overlay-totd" id="tipoftheday">
-         <form action="" class="tip_of_the_day_form" id="totd_form">
-             <div id="randomtip"></div>
-         </form>
-     </div>
-
-
-
-
-
-
+    <form action="" class="tip_of_the_day_form" id="totd_form">
+        <div id="randomtip"></div>
+    </form>
+</div>
 
 
 <!--        vendor scripts (скрипты от поставщика)-->
