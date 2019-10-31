@@ -226,6 +226,15 @@ a {
     }
 }
 
+.user-form form div {
+    margin: 3px auto;
+}
+
+.validation_error {
+    color: #FF1F1F;
+}
+
+
 /*Меню*/
 .main-navbar{
     background: #282828;

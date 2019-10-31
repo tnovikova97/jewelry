@@ -262,6 +262,7 @@
                 </div>
                 <p class="text-footer">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                     All rights reserved | Данный сайт создан не для коммерческой деятельности </p>
+            </div>
     </section>
 
 </section>
@@ -275,21 +276,38 @@
 
             <form class="login-form" id="login">
                 <h2>Войти</h2>
-                <input type="text" placeholder="Логин" name="login" class="input-reg">
+                <div><input type="text" placeholder="Логин" name="login" class="input-reg"></div>
                 <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
                 <input type="submit" value="Войти" name="reg" class="input-auth button_reg_auth">
                 <p class="message"> Нет аккаунта? <a href="" id="reg-link"> Зарегистрироваться</a></p>
             </form>
 
-            <form class="register-form" id="reg">
+            <form method="post" action="index.html" onsubmit="return validate()" class="register-form" id="reg" name = "reg-form">
                 <h2>Регистрация</h2>
-                <input type="text" placeholder="Имя" name="name" class="input-reg">
-                <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
-                <input type="email" placeholder="Почта" name="email-reg" class="input-reg">
-                <input type="email" placeholder="Подтвердите почту" name="email-reg2" class="input-reg">
-                <input type="text" placeholder="Логин" name="login" class="input-reg">
-                <input type="password" placeholder="Пароль" name="passwor-reg" class="input-reg">
-                <input type="password" placeholder="Подтвердите пароль" name="passwor-reg2" class="input-reg">
+                <div>
+                    <input type="text" placeholder="Имя" name="username" class="input-reg">
+                    <div id="username_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Фамилия" name="surname" class="input-reg">
+                    <div id="surname_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="email" placeholder="Почта" name="email" class="input-reg">
+                    <div id="email_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Логин" name="login" class="input-reg">
+                    <div id="login_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Пароль" name="password" class="input-reg">
+                    <div id="password_error" class="validation_error"></div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Подтвердите пароль" name="password2" class="input-reg">
+                    <div id="password2_error" class="validation_error"></div>
+                </div>
                 <input type="submit" value="Создать аккаунт" name="reg" class="input-reg button_reg_auth">
                 <p class="message"> Уже есть аккаунт? <a href="" id="log-link">Войти</a></p>
             </form>

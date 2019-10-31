@@ -69,8 +69,6 @@ $(function () {
 });
 
 //Совет дня (Tip of the Day)
-var today_obj=new Date();
-// var today_date=today_obj.getDate();
 
 // Определяем массив
 var tipOfTheDay = [ '',
@@ -80,21 +78,18 @@ var tipOfTheDay = [ '',
     '<h1>Совет дня </h1> <br> Красота - как драгоценный камень: чем она проще, тем драгоценнее <br>(Фрэнсис Бэкон)',
 ];
 
-// window.onload = function() {
-//     document.getElementById('TipOfTheDay').innerHTML = tipOfTheDay[today_date];
-// }
 function RandomTip() {
     var rnd = Math.floor((Math.random() * 4)) + 1
     document.getElementById('randomtip').innerHTML = tipOfTheDay[rnd];
 }
 
-// открыть по кнопке
+// совет дня - открыть по кнопке
 $('.js-btn-totd').click(function() {
     $('.js-overlay-totd').fadeIn();
 });
 
 
-// закрыть по клику вне окна
+// совет дня - закрыть по клику вне окна
 $(document).mouseup(function (e) {
     var popup = $('.js-popup-totd');
     if (e.target!=popup[0]&&popup.has(e.target).length === 0){
@@ -102,3 +97,128 @@ $(document).mouseup(function (e) {
 
     }
 });
+
+
+//Валидация формы регистрации
+
+// getting all input text objects
+var username = document.forms["reg-form"]["username"];
+var surname = document.forms["reg-form"]["surname"];
+var email = document.forms["reg-form"]["email"];
+var login = document.forms["reg-form"]["login"];
+var password = document.forms["reg-form"]["password"];
+var password2 = document.forms["reg-form"]["password2"];
+
+//getting all errors display objects
+var username_error = document.getElementById("username_error");
+var surname_error = document.getElementById("surname_error");
+var email_error = document.getElementById("email_error");
+var login_error = document.getElementById("login_error");
+var password_error = document.getElementById("password_error");
+var password2_error = document.getElementById("password2_error");
+
+//setting all event listeners
+username.addEventListener("blur", usernameVerify, true);
+surname.addEventListener("blur", surnameVerify, true);
+email.addEventListener("blur", emailVerify, true);
+login.addEventListener("blur", loginVerify, true);
+password.addEventListener("blur", passwordVerify, true);
+password2.addEventListener("blur", password2Verify, true);
+
+//validation function
+function validate() {
+    //username validation
+    if (username.value == "") {
+        username.style.border = "3px solid #FF1F1F";
+        username_error.textContent = "Требуется имя пользователя";
+        username.focus();
+        return false;
+    }
+    //surname validation
+    if (surname.value == "") {
+        surname.style.border = "3px solid #FF1F1F";
+        surname_error.textContent = "Требуется фамилия пользователя";
+        surname.focus();
+        return false;
+    }
+    //email validation
+    if (email.value == "") {
+        email.style.border = "3px solid #FF1F1F";
+        email_error.textContent = "Требуется адрес Email-почты";
+        email.focus();
+        return false;
+    }
+    //login validation
+    if (login.value == "") {
+        login.style.border = "3px solid #FF1F1F";
+        login_error.textContent = "Требуется логин";
+        login.focus();
+        return false;
+    }
+    //password validation
+    if (password.value == "") {
+        password.style.border = "3px solid #FF1F1F";
+        password_error.textContent = "Придумайте пароль";
+        password.focus();
+        return false;
+    }
+
+//    check if the two  password match
+    if (password.value != password2.value) {
+        password.style.border = "3px solid #FF1F1F";
+        password2.style.border = "3px solid #FF1F1F";
+        password_error.textContent = "Пароли не совпадают";
+        password.focus();
+        return false;
+    }
+    return true;
+}
+
+//event handler function
+function usernameVerify() {
+    if (username.value !="") {
+        username.style.border = "1px solid #5E6E66";
+        username_error.innerHTML = "";
+        return true;
+    }
+}
+
+function surnameVerify() {
+    if (surname.value !="") {
+        surname.style.border = "1px solid #5E6E66";
+        surname_error.innerHTML = "";
+        return true;
+    }
+}
+
+function emailVerify() {
+    if (email.value !="") {
+        email.style.border = "1px solid #5E6E66";
+        email_error.innerHTML = "";
+        return true;
+    }
+}
+
+function loginVerify() {
+    if (login.value !="") {
+        login.style.border = "1px solid #5E6E66";
+        login_error.innerHTML = "";
+        return true;
+    }
+}
+
+function passwordVerify() {
+    if (password.value !="") {
+        password.style.border = "1px solid #5E6E66";
+        password_error.innerHTML = "";
+        return true;
+    }
+}
+
+function password2Verify() {
+    if (password2.value !="") {
+        password2.style.border = "1px solid #5E6E66";
+        password2_error.innerHTML = "";
+        return true;
+    }
+}
