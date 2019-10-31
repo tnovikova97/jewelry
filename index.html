@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-<!--            menu-->
+            <!--            menu-->
             <nav class="main-navbar">
                 <div class="container">
                     <ul class="main-menu">
@@ -52,6 +52,8 @@
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Полезная информация</a></li>
                         <li><a href="#">О компании</a></li>
+                        <button onclick="RandomTip()" class="tip_of_the_day-button js-btn-totd"> <span> Совет дня </span></button>
+
                     </ul>
                 </div>
             </nav>
@@ -73,7 +75,7 @@
             </div>
         </section>
 
-<!--        Преимущества-->
+        <!--        Преимущества-->
         <section class="features-section">
             <div class="features-section-wrapper">
                 <div class="features-col p-0 feature">
@@ -265,7 +267,6 @@
 </section>
 
 <!--            Регистрация-->
-
 <div class="overlay-reg js-overlay-reg">
     <div class="popup-reg js-popup-reg">
         <h2>Регистрация</h2>
@@ -282,6 +283,19 @@
         </form>
     </div>
 </div>
+
+<!--Совет дня-->
+     <div class="overlay-totd js-overlay-totd" id="tipoftheday">
+         <form action="" class="tip_of_the_day_form" id="totd_form">
+             <div id="randomtip"></div>
+         </form>
+     </div>
+
+
+
+
+
+
 
 <!--        vendor scripts (скрипты от поставщика)-->
 <script src="libs/jquery/jquery-3.4.1.min.js"></script>

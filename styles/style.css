@@ -153,7 +153,6 @@ a {
     cursor: pointer;
 }
 
-
 .close-popup-reg:before {
     content: '';
     background-color: black;
@@ -196,14 +195,6 @@ a {
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 
     .popup-reg {
@@ -212,42 +203,6 @@ a {
         font-size: 15px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Меню*/
 .main-navbar{
@@ -525,8 +480,12 @@ a {
     cursor: pointer;
 }
 
-.view-button:hover {
-    color: #fff;
+.view-button:hover{
+    background-color: #ffbc7b;
+}
+
+.view-button:hover span {
+    color: black;
 }
 
 .view.sb-white {
@@ -721,6 +680,58 @@ a {
     color: white;
     font-size: 16px;
 }
+
+/*Кнопка "Совет дня"*/
+.tip_of_the_day-button {
+    border: none;
+    background-color: #282828;
+    cursor: pointer;
+}
+
+.tip_of_the_day-button span {
+    color: white;
+}
+
+.tip_of_the_day-button:hover span {
+    color: #ffbc7b;
+}
+
+/*Модальное окно "Совет дня"*/
+.tip_of_the_day_form {
+    margin: auto;
+    width: max-content;
+    background-color: #ffbc7b;
+    color: black;
+    padding: 20px;
+    /*display: block;*/
+}
+
+#randomtip {
+    text-align: center;
+    color: black;
+}
+
+#tipoftheday h1 {
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.overlay-totd {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+
+
+
+
+
 
 @media (min-width: 1024px) {
 
