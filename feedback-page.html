@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewelry House</title>
+    <title>Feedback Page</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
 
-    <!--Подключаем стили CSS OwlCarousel-->
-    <link rel="stylesheet" href="libs/OwlCarousel2/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/OwlCarousel2/assets/owl.theme.default.css">
-
 </head>
-
 <body>
 
 <section class="main-content-wrapper">
-
-    <!--    first screen-->
     <section class="first-screen">
         <section class="header-section">
             <div class="header-top">
@@ -40,7 +33,7 @@
             <nav class="main-navbar">
                 <div class="container">
                     <ul class="main-menu">
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="index.html">Главная</a></li>
                         <li><a href="#products">Украшения</a>
                             <ul class="sub-menu">
                                 <li><a href="#">Серьги</a></li>
@@ -61,151 +54,52 @@
                 </div>
             </nav>
 
-        </section>
+            <div class="feedback-page">
+                <div class="feedback-page_title"><h1>Ваши отзывы</h1></div>
+                <div class="container">
 
-        <section class="home">
-            <div class="home-content-wrapper block-content-wrapper">
-                <div class="home-content">
-                    <h1 class="home-content-title">
-                        Jewelry House
-                    </h1>
-                    <a href="#products" class="home-content-button">
-                                    <span class="home-content-button-text">
-                                        Наши украшения
-                                    </span>
-                    </a>
-                </div>
-            </div>
-        </section>
+                    <div class="feedback-box" id="comment-field">
+                        <div class="left_panel">
+                            <div class="user-pic"> ff</div>
+                            <div class="user-name"> sss</div>
+                        </div>
 
-        <!--        Преимущества-->
-        <section class="features-section">
-            <div class="features-section-wrapper">
-                <div class="features-col p-0 feature">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="img/icons/1.png">
-                            <h2>БЕЗОПАСНЫЕ ПЛАТЕЖИ</h2>
+                        <div class="right_panel">
+                            <div class="alert-comment"> </div>
+
                         </div>
+
+                        <div class="clear-fd-panel"></div>
                     </div>
-                </div>
-                <div class="features-col p-0 feature">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="img/icons/2.png">
-                            <h2>ПРЕМИУМ ПРОДУКТЫ</h2>
-                        </div>
+
+                    <div class="feedback-form">
+                        <h1>New feedback</h1>
+
+                        <label for="comment-name">Name: </label>
+                        <input type="text" id="comment-name" class="input-text"
+                               placeholder="Your name">
+
+                        <label for="comment-body">Comment: </label>
+                        <input type="text" id="comment-body" class="input-text"
+                               placeholder="Your comment">
+
+                        <button type="submit" id="addcoment" class="addcomment-btn"> add comment</button>
+
                     </div>
+
                 </div>
-                <div class="features-col p-0 feature">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="img/icons/3.png">
-                            <h2>БЫСТРАЯ ДОСТАВКА</h2>
-                        </div>
-                    </div>
-                </div>
+
             </div>
+
+
+
+
         </section>
     </section>
 
-    <!--        products-->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="products-title">
-                <h2> - Наши украшения - </h2>
-            </div>
-
-            <div class="owl-carousel owl-theme" id="carousel1">
-                <div class="products-item">
-                    <div class="products-pic">
-                        <img src="./img/products/1.jpg">
-                        <div class="product-links">
-                            <a href="#" class="view-button">
-                                <span class="view-button-text">Кольца</span></a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="product-item">
-                    <div class="products-pic">
-                        <img src="./img/products/2.jpg">
-                        <div class="product-links">
-                            <a href="#" class="view-button">
-                                <span class="view-button-text">Подвески</span></a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="product-item">
-                    <div class="products-pic">
-                        <img src="./img/products/4.jpg">
-
-                        <div class="product-links">
-                            <a href="#" class="view-button">
-                                <span class="view-button-text">Серьги</span></a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="product-item">
-                    <div class="products-pic">
-                        <img src="./img/products/5.jpg">
-                        <div class="product-links">
-                            <a href="#" class="view-button">
-                                <span class="view-button-text">Браслеты</span></a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="product-item">
-                    <div class="products-pic">
-                        <img src="./img/products/6.jpg">
-                        <div class="product-links">
-                            <a href="#" class="view-button">
-                                <span class="view-button-text">Часы</span></a>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-
-    </section>
-
-    <!--        photo-->
-    <section class="photo" id="photo">
-
-        <div class="container">
-            <div class="photo-title">
-                <h2> - Фотографии - </h2>
-            </div>
-
-            <!--        используем библиотеку js owlCarousel,
-                        она использует jquery-->
-
-            <div class="owl-carousel owl-theme" id="carousel2">
-                <div><img src="img/photo/1.jpg" alt="Img"></div>
-                <div><img src="img/photo/2.jpg" alt="Img"></div>
-                <div><img src="img/photo/3.jpg" alt="Img"></div>
-                <div><img src="img/photo/4.jpg" alt="Img"></div>
-                <div><img src="img/photo/5.jpg" alt="Img"></div>
-                <div><img src="img/photo/6.jpg" alt="Img"></div>
-                <div><img src="img/photo/7.jpg" alt="Img"></div>
-            </div>
-        </div>
-
-
-    </section>
 
     <!--        footer-->
-    <section class="footer">
+    <div class="footer">
         <div class="container">
             <div class="footer-logo">
                 <a href="index.html">
@@ -268,9 +162,10 @@
                 </p>
             </div>
         </div>
-    </section>
 
+    </div>
 </section>
+
 
 <!--            Регистрация-->
 <div class="overlay-reg js-overlay-reg">
@@ -279,8 +174,7 @@
         <div class="close-popup-reg js-close-reg"></div>
         <div class="user-form">
 
-            <form method="post" action="" onsubmit="return validate_auth()" class="login-form"
-                  id="login"
+            <form method="post" action="index.html" onsubmit="return validate_auth()" class="login-form" id="login"
                   name="auth-form">
                 <h2>Войти</h2>
                 <div>
@@ -295,8 +189,7 @@
                 <p class="message"> Нет аккаунта? <a href="" id="reg-link"> Зарегистрироваться</a></p>
             </form>
 
-            <form method="post" action="" onsubmit="return validate_reg()" class="register-form"
-                  id="reg"
+            <form method="post" action="index.html" onsubmit="return validate_reg()" class="register-form" id="reg"
                   name="reg-form">
                 <h2>Регистрация</h2>
                 <div>
@@ -338,13 +231,12 @@
     </form>
 </div>
 
-
 <!--        vendor scripts (скрипты от поставщика)-->
 <script src="libs/jquery/jquery-3.4.1.min.js"></script>
-<script src="libs/OwlCarousel2/owl.carousel.min.js"></script>
 
 <!--    user scripts-->
 <script src="js/main.js"></script>
+<script src="feedback-page.html"></script>
 
 
 </body>
