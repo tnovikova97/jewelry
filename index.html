@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewelry House</title>
-    <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 
     <!--Подключаем стили CSS OwlCarousel-->
     <link rel="stylesheet" href="libs/OwlCarousel2/assets/owl.carousel.min.css">
@@ -284,14 +284,14 @@
                   name="auth-form">
                 <h2>Войти</h2>
                 <div>
-                    <input type="text" placeholder="Логин" name="login_auth" class="input-reg">
+                    <input type="text" placeholder="Логин" name="login_auth" class="input-reg" required>
                     <div id="login_auth_error" class="validation_error"></div>
                 </div>
                 <div>
-                    <input type="password" placeholder="Пароль" name="password_auth" class="input-reg">
+                    <input type="password" placeholder="Пароль" name="password_auth" class="input-reg" required>
                     <div id="password_auth_error" class="validation_error"></div>
                 </div>
-                <input type="submit" value="Войти" name="reg" class="input-auth button_reg_auth">
+                <input type="submit" value="Войти" name="reg" class="button_reg_auth">
                 <p class="message"> Нет аккаунта? <a href="" id="reg-link"> Зарегистрироваться</a></p>
             </form>
 
@@ -323,8 +323,29 @@
                     <input type="password" placeholder="Подтвердите пароль" name="password2" class="input-reg">
                     <div id="password2_error" class="validation_error"></div>
                 </div>
-                <input type="submit" value="Создать аккаунт" name="reg" class="input-reg button_reg_auth">
+
+                <!--                капча-->
+
+                <div class="captcha">
+
+                    <p>Введите сумму: </p>
+
+                    <span id="captcha-span"></span>
+
+                    <input type="text" id="txtInput"/>
+
+                    <div class="captcha-right" style="display:none;">
+                        <p>Правильно!</p>
+                    </div>
+                    <div class="captcha-error" style="display:none;">
+                        <p>Неверно!</p>
+                    </div>
+
+                </div>
+
+                <input type="submit" value="Создать аккаунт"  name="reg" class="input-reg button_reg_auth">
                 <p class="message"> Уже есть аккаунт? <a href="" id="log-link">Войти</a></p>
+
             </form>
 
         </div>
@@ -342,6 +363,7 @@
 <!--        vendor scripts (скрипты от поставщика)-->
 <script src="libs/jquery/jquery-3.4.1.min.js"></script>
 <script src="libs/OwlCarousel2/owl.carousel.min.js"></script>
+
 
 <!--    user scripts-->
 <script src="js/main.js"></script>
