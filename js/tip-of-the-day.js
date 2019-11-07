@@ -1,7 +1,7 @@
 //Совет дня (Tip of the Day)
 
 // Определяем массив
-var tipOfTheDay = ['',
+var tipOfTheDay = [
     '<h1>Совет дня </h1> <br> Украшения - это то, что делает женщищу женщиной <br>(Коко Шанель)',
     '<h1>Совет дня </h1> <br> Ювелирные украшения - то дополнение, которое дает возможность почувствовать себя особенной <br>(Кэтрин Зета-Джонс)',
     '<h1>Совет дня </h1> <br> Бриллианты - всегда признак хорошего вкуса <br>(Вудди Аллен)',
@@ -9,7 +9,7 @@ var tipOfTheDay = ['',
 ];
 
 function RandomTip() {
-    var rnd = Math.floor((Math.random() * 4)) + 1
+    var rnd = Math.floor((Math.random() * tipOfTheDay.length));
     document.getElementById('randomtip').innerHTML = tipOfTheDay[rnd];
 }
 
